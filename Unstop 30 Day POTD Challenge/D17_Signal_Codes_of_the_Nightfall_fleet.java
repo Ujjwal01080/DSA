@@ -7,7 +7,8 @@ public class D17_Signal_Codes_of_the_Nightfall_fleet {
         Node[] next = new Node[2];
         int maxIdx = -1;
 
-        Node() {}
+        Node() {
+        }
 
         Node(Node src) {
             if (src != null) {
@@ -23,7 +24,7 @@ public class D17_Signal_Codes_of_the_Nightfall_fleet {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter out = new PrintWriter(new BufferedOutputStream(System.out));
-        
+
         int n = Integer.parseInt(br.readLine().trim());
         StringTokenizer st = new StringTokenizer(br.readLine());
 

@@ -5,6 +5,7 @@ import java.util.*;
 public class D16_The_Whispiring_roots_of_devgarh {
     static class Node {
         int to, wt;
+
         Node(int to, int wt) {
             this.to = to;
             this.wt = wt;
@@ -32,10 +33,12 @@ public class D16_The_Whispiring_roots_of_devgarh {
         dp = new long[n + 1];
         ans = new long[n + 1];
 
-        for (int i = 1; i <= n; i++) gph[i] = new ArrayList<>();
+        for (int i = 1; i <= n; i++)
+            gph[i] = new ArrayList<>();
 
         st = new StringTokenizer(br.readLine());
-        for (int i = 1; i <= n; i++) val[i] = Integer.parseInt(st.nextToken());
+        for (int i = 1; i <= n; i++)
+            val[i] = Integer.parseInt(st.nextToken());
 
         for (int i = 0; i < n - 1; i++) {
             st = new StringTokenizer(br.readLine());
@@ -67,7 +70,8 @@ public class D16_The_Whispiring_roots_of_devgarh {
             }
         }
 
-        for (int i = 1; i <= n; i++) sub[i] = val[i];
+        for (int i = 1; i <= n; i++)
+            sub[i] = val[i];
 
         for (int i = n - 1; i >= 0; i--) {
             int u = order[i];

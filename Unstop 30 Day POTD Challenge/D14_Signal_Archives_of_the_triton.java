@@ -89,7 +89,8 @@ public class D14_Signal_Archives_of_the_triton {
             if (head >= tail) {
                 head = 0;
                 tail = in.read(buf, 0, buf.length);
-                if (tail <= 0) return -1;
+                if (tail <= 0)
+                    return -1;
             }
             return buf[head++];
         }
@@ -97,12 +98,14 @@ public class D14_Signal_Archives_of_the_triton {
         public int nextInt() throws IOException {
             int c = read();
             while (c <= ' ') {
-                if (c == -1) return -1;
+                if (c == -1)
+                    return -1;
                 c = read();
             }
             int res = 0;
             while (c > ' ') {
-                if (c < '0' || c > '9') break;
+                if (c < '0' || c > '9')
+                    break;
                 res = res * 10 + (c - '0');
                 c = read();
             }
