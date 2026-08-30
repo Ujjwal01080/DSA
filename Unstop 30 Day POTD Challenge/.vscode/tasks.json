@@ -5,10 +5,10 @@
             "label": "Run Solution with input.txt",
             "type": "shell",
             "command": "cmd",
-            "args": [
-                "/c",
-                "javac Solution.java && java Solution < input.txt > output.txt"
-            ],
+            "args": ["/c",
+                     "java \"${file}\" < \"${fileDirname}\\input.txt\" > \"${fileDirname}\\output.txt\""
+]
+,
             "options": {
                 "cwd": "${workspaceFolder}"
             },
